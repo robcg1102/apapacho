@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body{
+    font-family: 'Alata', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: -webkit-linear-gradient(90deg, rgb(210, 108, 255), rgb(119, 0, 172));
+    background: linear-gradient(90deg, rgb(210, 108, 255), rgb(119, 0, 172));
+    width: 100%;
+    padding: 25px 0 20px 0;
+    border-radius: 0px 0px 10px 10px;
+}
+#navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+#navbar a:visited{
+    color: white;
+}
+
+#navbar a:active{
+    color: white;
+}
+
+#navbar a:hover{
+    transform: scale(1.2);
+}
+
+.myMenu{
+    padding-right: 15px;
+}
+
+.myMenu a{
+    padding-right: 15px;
+}
+
+#logo {
+    padding-left: 0.5em;
+}
+
+
+#logo a{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+#logo img{
+    width: 25px;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+#headerTitle{
+    text-align: center;
+}
+
+#headerTitle img{
+    width: 15vw;
+}
+
+ 
+#header img{
+    border-radius: 0 0 2% 20%;
+}
+
+#allExplain{
+    text-align: center;
+}
+
+#explainHome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.eachUs{
+    text-align: center;
+}
+
+.eachUs ul{
+    text-align: left;
+}
+
+#register{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#register form{
+    align-items: center;
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px; 
+    background: -webkit-linear-gradient(60deg, rgb(232, 207, 143), rgb(180, 76, 1));
+    background: linear-gradient(60deg, rgb(232, 207, 143), rgb(180, 76, 1));
+    box-shadow: 7px 8px 15px #957794;
+    color: white;
+}
+
+#register button{
+    margin: 10px 0;
+    border-radius: 3px;
+}
+
+#register button:hover{
+    transform: scale(1.1);
+}
+
+#register input, textarea{
+    border-radius: 3px;
+    margin: 15px 0;
+}
+
+#register select{
+    border-radius: 3px;
+    margin: 15px 0;
+}
+
+#allComments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardComment{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 15px 10px;
+    border-radius: 6px;
+}
+
+.cardComment img{
+    width: 30%;
+}
+.notFound {
+    text-align: center;
+}
+#myComments{
+    text-align: center;
+}
+#bodyAllComments{
+    text-align: center;
+}
+
+.validate {
+    text-align: center;
+}
+
+.active {
+    color: white;
+    background: -webkit-linear-gradient(60deg, rgb(143, 232, 206), rgb(1, 180, 132));
+    background: linear-gradient(60deg, rgb(143, 232, 206), rgb(1, 180, 132));
+}
+
+.inactive {   
+    background: -webkit-linear-gradient(60deg, rgb(232, 207, 143), rgb(180, 76, 1));
+    background: linear-gradient(60deg, rgb(232, 207, 143), rgb(180, 76, 1));
+    color: white;
+}
+
+.buttonD{
+    padding: 7px 15px;
+    margin: 15px 0;
+    background-color: rgb(218, 71, 71);
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+}
+strong{
+    color: black;
+}
+.buttonD:hover{
+    transform: scale(1.1);
+}
+
+#intro{
+    text-align: center;
+}
+@media (max-width: 700px) {
+    #explainHome{
+        flex-direction: column;
+    }
+    #header{
+        flex-direction: column;
+    }
+    #header img{
+        width: 80%;
+    }
+    #register form{
+        width: 95%;
+    }
+    .cardComment{
+        width: 80%;
+    }
+    .myMenu a{
+        font-size: 13px;
+        padding-right: 6px;
+    }
+  }

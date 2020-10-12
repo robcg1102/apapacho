@@ -1,0 +1,30 @@
+{{#if user}}
+
+<div id="intro">
+
+  <p>¡¡Bienvenido, {{user.name}}!!</p>
+
+</div>
+
+{{/if}}
+
+<div id="allComments">
+
+  {{#each comments}}
+  <div class="cardComment inactive">
+    <div><strong>Necesita:</strong> {{comment}}</div>
+    <div><strong>Quién?:</strong> {{who}}</div>
+    <div><strong>Descripción:</strong> {{description}}</div>
+    <div><strong>Casa hogar: </strong>{{owner.name}}</div>
+    <div><strong>Email de contacto:</strong> {{owner.email}}</div>
+    <img src={{imgUrl}} alt="...">
+    <a href=/donate/{{_id}} class="buttonD">No donar 💔</a>
+  </div>
+  {{else}}
+  <div class="cardComment">
+    <h2> Por el momento no tienes donaciones pendientes que quieras realizar. </h2>
+    <p>Cuando hayas seleccionado la donación dentro de la sección de "Solicitudes" aparecerá en este apartado. Podrás
+      verificar el nombre de la institución que lo requiere, así como un correo de contacto.</p>
+  </div>
+  {{/each}}
+</div>

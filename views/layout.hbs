@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/App.css"> 
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/robcg1102/image/upload/v1598560089/Apapacho/hands_k5wzyk.png">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <a href="/"><img
+                    src="https://res.cloudinary.com/robcg1102/image/upload/v1598560089/Apapacho/hands_k5wzyk.png"
+                    alt="...">Inicio</a>
+        </div>
+        <div class="myMenu">
+            {{#if user}}
+            <a href="/private-page">Perfil</a>
+                {{#if user.creator}}
+                <a href="/mycomments">Mis solicitudes</a>
+                {{/if}}
+            <a href="/allComments">Solicitudes</a>
+            <a href="/logout">Salir</a>
+            {{else}}
+            <a href="/signup">Registro</a>
+            <a href="/login">Ingresa</a>
+            {{/if}}
+        </div>
+    </div>
+
+    {{{body}}}
+</body>
+
+</html>

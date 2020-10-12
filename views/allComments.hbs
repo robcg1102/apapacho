@@ -1,0 +1,20 @@
+<div id="bodyAllComments">
+    <h3>Solicitudes</h3>
+    <div id="allComments">
+
+
+        {{#each comments}}
+        <div class="cardComment active">
+            <div><strong>Necesita:</strong> {{comment}}</div>
+            <div><strong>Quién?:</strong> {{who}}</div>
+            <div><strong>Descripción:</strong> {{description}}</div>
+            <div><strong>Casa hogar:</strong> {{owner.name}}</div>
+            <img src={{imgUrl}} alt="...">
+            <a href=/donate/{{_id}} class="buttonD">Donar ❤</a>
+        </div>
+        {{else}}
+        <h2>Por el momento no hay Donaciones pendientes</h2>
+        {{/each}}
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div id="myComments">
+    <h3>Mis solicitudes</h3>
+    <form action="/private-page" method="POST" id="register">
+        <p>Haz una solicitud para tu persona de la tercera edad</p>
+        <input type="text" name="who" placeholder="¿Para quién es?" required>
+        <input type="text" name="comment" placeholder="¿Qué requiere?" required id="comment">
+        <textarea name="description" placeholder="Descripción de lo que requiere" rows="5" cols="40"
+            required></textarea>
+        <button type="submit">Solicitar</button>
+    </form>
+    <div id="allComments">
+
+        {{#each comments}}
+        <div class="cardComment active">
+            <div><strong>Requiere: </strong> {{comment}}</div>
+            <div><strong>Quién?: </strong> {{who}}</div>
+            <div><strong>Descripción: </strong> {{description}}</div>
+            {{#if donor}}  
+            <div><strong>Donador:</strong> {{donor.name}}</div>
+            <div><strong>Correo de contacto:</strong> {{donor.email}}</div>
+            {{/if}}
+            <img src={{imgUrl}} alt="..." />
+            <a href=/mycomments/{{_id}} class="buttonD">Eliminar</a>
+        </div>
+        {{else}}
+        <div><p>
+            Por el momento no has hecho ninguna solicitud.
+            En este apartado aparecerán todas tus solicitudes.
+        </p></div>
+
+        {{/each}}
+    </div>
+</div>
